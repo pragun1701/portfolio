@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <link rel="icon" type="png" href="assets/loupe_1313570.png">
+  <title>Welcome | Pragun Portfolio</title>
+  <link rel="stylesheet" href="style.css">
+
+</head>
+<body class="welcome-body">
+
+  <audio src="assets/welcome.mp3" autoplay loop></audio>
+  
+  <div class="welcome-container" id="welcomeBox">
+    <h1>Welcome to Pragun’s Portfolio</h1>
+    <p style="font-size: 2rem; color: rgb(248, 241, 241);">Do you like snooker.</p>
+
+    <div class="buttons">
+  <button class="fancy-btn" onclick="showMessageAndRedirect()">Yes</button>
+  <button class="fancy-btn" onclick="showMessageAndRedirect()">No</button>
+</div>
+</div>
+
+
+ <script>
+  function showMessageAndRedirect() {
+    const welcomeBox = document.getElementById("welcomeBox");
+    welcomeBox.innerHTML = `
+      <h1 style="font-size: 2.5rem; color: white;">Opening Website 👋</h1>
+      <p style="font-size: 2rem; color: white;">Thank you for sharing. Redirecting...</p>
+    `;
+
+    // Redirect to index.html after 2 seconds
+    setTimeout(() => {
+      window.location.href = "home.html";
+    }, 2000);
+  }
+</script>
+
+
+</body>
+</html>
